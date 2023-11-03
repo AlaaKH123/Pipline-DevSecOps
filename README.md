@@ -14,22 +14,9 @@
   <p align="center">Home Page</p>
 </div>
 
-# **Youtube Video for step by step Demonstration!**
-[![Video Tutorial](https://img.youtube.com/vi/g8X5AoqCJHc/0.jpg)](https://youtu.be/g8X5AoqCJHc)
-
-
-## Susbcribe:
-[https://www.youtube.com/@cloudchamp?
-](https://www.youtube.com/@cloudchamp?sub_confirmation=1)
-
 # Deploy Netflix Clone on Cloud using Jenkins - DevSecOps Project!
 
 ### **Phase 1: Initial Setup and Deployment**
-
-**Step 1: Launch EC2 (Ubuntu 22.04):**
-
-- Provision an EC2 instance on AWS with Ubuntu 22.04.
-- Connect to the instance using SSH.
 
 **Step 2: Clone the Code:**
 
