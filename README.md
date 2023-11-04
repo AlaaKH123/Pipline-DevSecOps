@@ -104,7 +104,7 @@ docker build --build-arg TMDB_V3_API_KEY=<the-api-key> -t netflix .
 **Phase 3: CI/CD Setup**
 
 1. **Install Jenkins for Automation:**
-    - Install Jenkins on the our instance to automate deployment:
+    - Install Jenkins on our localhost to automate deployment:
     Install Java
     
     ```bash
