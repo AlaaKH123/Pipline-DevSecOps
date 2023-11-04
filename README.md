@@ -56,7 +56,7 @@ It will show an error cause we need API key
 
 - Open a web browser and navigate to TMDB (The Movie Database) website.
 - Click on "Login" and create an account.
-- Once logged in, go to our profile and select "Settings."
+- Once logged in,we go to our profile and select "Settings."
 - Click on "API" from the left-side panel.
 - Create a new API key by clicking "Create" and accepting the terms and conditions.
 - Provide the required basic details and click "Submit."
@@ -169,7 +169,7 @@ We will install a sonar scanner in the tools.
 Create a Jenkins webhook
 
 1. **Configure CI/CD Pipeline in Jenkins:**
-- Create a CI/CD pipeline in Jenkins to automate your application deployment.
+- Create a CI/CD pipeline in Jenkins to automate our application deployment.
 
 ```groovy
 pipeline {
@@ -222,7 +222,7 @@ Certainly, here are the instructions without step numbers:
 
 **Install Dependency-Check Plugin:**
 
-- Go to "Dashboard" in our Jenkins web interface.
+- We go to "Dashboard" in our Jenkins web interface.
 - Navigate to "Manage Jenkins" → "Manage Plugins."
 - Click on the "Available" tab and search for "OWASP Dependency-Check."
 - Check the checkbox for "OWASP Dependency-Check" and click on the "Install without restart" button.
@@ -496,7 +496,7 @@ pipeline{
    sudo systemctl status node_exporter
    ```
 
-   You can access Node Exporter metrics in Prometheus.
+   We can access Node Exporter metrics in Prometheus.
 
 2. **Configure Prometheus Plugin Integration:**
 
@@ -614,7 +614,7 @@ When we log in for the first time, Grafana will prompt us to change the default 
 
 **Step 9: Add Prometheus Data Source:**
 
-To visualize metrics, you need to add a data source. We follow these steps:
+To visualize metrics, we need to add a data source. We follow these steps:
 
 - Click on the gear icon (⚙️) in the left sidebar to open the "Configuration" menu.
 
@@ -638,11 +638,11 @@ To make it easier to view metrics, we can import a pre-configured dashboard. We 
 
 - Click on the "Import" dashboard option.
 
-- Enter the dashboard code you want to import (e.g., code 1860).
+- Enter the dashboard code we want to import (e.g., code 1860).
 
 - Click the "Load" button.
 
-- Select the data source you added (Prometheus) from the dropdown.
+- Select the data source we added (Prometheus) from the dropdown.
 
 - Click on the "Import" button.
 
@@ -705,7 +705,7 @@ Update our Prometheus configuration (prometheus.yml) to add a new job for scrapi
       - targets: ['node1Ip:9100']
 ```
 
-Replace 'our-job-name' with a descriptive name for our job. The static_configs section specifies the targets to scrape metrics from, and in this case, it's set to nodeip:9001.
+We replace 'our-job-name' with a descriptive name for our job. The static_configs section specifies the targets to scrape metrics from, and in this case, it's set to nodeip:9001.
 
 Don't forget to reload or restart Prometheus to apply these changes to our configuration.
 
