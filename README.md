@@ -237,7 +237,7 @@ Certainly, here are the instructions without step numbers:
 
 **Install Docker Tools and Docker Plugins:**
 
-- Go to "Dashboard" in your Jenkins web interface.
+- Go to "Dashboard" in our Jenkins web interface.
 - Navigate to "Manage Jenkins" → "Manage Plugins."
 - Click on the "Available" tab and search for "Docker."
 - Check the following Docker-related plugins:
@@ -345,7 +345,7 @@ pipeline{
 
 1. **Install Prometheus and Grafana:**
 
-   Set up Prometheus and Grafana to monitor your application.
+   Set up Prometheus and Grafana to monitor our application.
 
    **Installing Prometheus:**
 
