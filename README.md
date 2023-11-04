@@ -229,11 +229,11 @@ Certainly, here are the instructions without step numbers:
 
 **Configure Dependency-Check Tool:**
 
-- After installing the Dependency-Check plugin, you need to configure the tool.
+- After installing the Dependency-Check plugin, we need to configure the tool.
 - We go to "Dashboard" → "Manage Jenkins" → "Global Tool Configuration."
 - Find the section for "OWASP Dependency-Check."
 - Add the tool's name, e.g., "DP-Check."
-- Save your settings.
+- Save our settings.
 
 **Install Docker Tools and Docker Plugins:**
 
@@ -250,13 +250,13 @@ Certainly, here are the instructions without step numbers:
 
 **Add DockerHub Credentials:**
 
-- To securely handle DockerHub credentials in your Jenkins pipeline, follow these steps:
+- To securely handle DockerHub credentials in our Jenkins pipeline,we follow these steps:
   - Go to "Dashboard" → "Manage Jenkins" → "Manage Credentials."
   - Click on "System" and then "Global credentials (unrestricted)."
   - Click on "Add Credentials" on the left side.
   - Choose "Secret text" as the kind of credentials.
-  - Enter your DockerHub credentials (Username and Password) and give the credentials an ID (e.g., "docker").
-  - Click "OK" to save your DockerHub credentials.
+  - Enter our DockerHub credentials (Username and Password) and give the credentials an ID (e.g., "docker").
+  - Click "OK" to save our DockerHub credentials.
 
 Now, we have installed the Dependency-Check plugin, configured the tool, and added Docker-related plugins along with our DockerHub credentials in Jenkins. We can now proceed with configuring our Jenkins pipeline to include these tools and credentials in our CI/CD process.
 
