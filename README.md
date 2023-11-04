@@ -56,15 +56,15 @@ It will show an error cause we need API key
 
 - Open a web browser and navigate to TMDB (The Movie Database) website.
 - Click on "Login" and create an account.
-- Once logged in, go to your profile and select "Settings."
+- Once logged in, go to our profile and select "Settings."
 - Click on "API" from the left-side panel.
 - Create a new API key by clicking "Create" and accepting the terms and conditions.
 - Provide the required basic details and click "Submit."
-- we will receive your TMDB API key.
+- we will receive our TMDB API key.
 
-Now we recreate the Docker image with your api key:
+Now we recreate the Docker image with our api key:
 ```
-docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix .
+docker build --build-arg TMDB_V3_API_KEY=<the-api-key> -t netflix .
 ```
 
 **Phase 2: Security**
