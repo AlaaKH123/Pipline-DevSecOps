@@ -663,9 +663,22 @@ That's it! We've successfully installed and set up Grafana to work with Promethe
 
 # Phase 6: Kubernetes
 
-## Create Kubernetes Cluster with Nodegroups
+## Installing Minikube and create Kubernetes Cluster.
+sudo apt install -y curl wget apt-transport-https
 
-In this phase, We'll set up a Kubernetes cluster with node groups. This will provide a scalable environment to deploy and manage our applications.
+wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+
+sudo cp minikube-linux-amd64 /usr/local/bin/minikube
+
+sudo chmod +x /usr/local/bin/minikube
+
+curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+
+chmod +x kubectl 
+
+sudo mv kubectl /usr/local/bin/
+
+minikube start --driver=docker
 
 ## Monitor Kubernetes with Prometheus
 
