@@ -665,7 +665,7 @@ That's it! We've successfully installed and set up Grafana to work with Promethe
 
 ## Installing Minikube and create Kubernetes Cluster.
 
-sudo apt install -y curl wget apt-transport-https
+```sudo apt install -y curl wget apt-transport-https
 
 wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 
@@ -679,7 +679,7 @@ chmod +x kubectl
 
 sudo mv kubectl /usr/local/bin/
 
-minikube start --driver=docker
+minikube start --driver=docker```
 
 
 ## Monitor Kubernetes with Prometheus
@@ -729,7 +729,7 @@ To deploy an application with ArgoCD, we can follow these steps, which we'll out
 ### Deploy Application with ArgoCD
 
 1. **Install ArgoCD:**
-2. <div>
+```
   kubectl create ns argocd
 
   kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v2.5.8/manifests/install.yaml
@@ -740,7 +740,7 @@ To deploy an application with ArgoCD, we can follow these steps, which we'll out
 
   kubectl port-forward svc/argocd-server -n argocd 30000:443
   
-</div>
+```
 
 3. **Set our GitHub Repository as a Source:**
 
