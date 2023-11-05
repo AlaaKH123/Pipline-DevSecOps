@@ -729,20 +729,30 @@ To deploy an application with ArgoCD, we can follow these steps, which we'll out
 ### Deploy Application with ArgoCD
 
 1. **Install ArgoCD:**
+2. <div>
+  kubectl create ns argocd
 
-   We can install ArgoCD on our Kubernetes cluster by following the instructions provided in the [EKS Workshop](https://archive.eksworkshop.com/intermediate/290_argocd/install/) documentation.
+  kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v2.5.8/manifests/install.yaml
 
-2. **Set our GitHub Repository as a Source:**
+  Let’s verify the installation by getting all the objects in the ArgoCD namespace.
+
+  kubectl get all -n argocd
+
+  kubectl port-forward svc/argocd-server -n argocd 30000:443
+  
+</div>
+
+3. **Set our GitHub Repository as a Source:**
 
    After installing ArgoCD, we need to set up your GitHub repository as a source for our application deployment. This typically involves configuring the connection to our repository and defining the source for our ArgoCD application. The specific steps will depend on our setup and requirements.
 
-3. **Create an ArgoCD Application:**
+4. **Create an ArgoCD Application:**
    - `name`: Set the name for our application.
    - `destination`: Define the destination where our application should be deployed.
    - `project`: Specify the project the application belongs to.
    - `source`: Set the source of our application, including the GitHub repository URL, revision, and the path to the application within the repository.
    - `syncPolicy`: Configure the sync policy, including automatic syncing, pruning, and self-healing.
 
-4. **Access your Application**
+5. **Access your Application**
    - To Access we need to open a new tab paste our NodeIP:30007 and our app should be running.
 
