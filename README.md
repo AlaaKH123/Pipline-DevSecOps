@@ -665,7 +665,6 @@ That's it! We've successfully installed and set up Grafana to work with Promethe
 
 ## Installing Minikube and create Kubernetes Cluster.
 
-**Installation** :
 sudo apt install -y curl wget apt-transport-https
 
 wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
@@ -682,7 +681,7 @@ sudo mv kubectl /usr/local/bin/
 
 minikube start --driver=docker
 
-**Monitoring :**
+
 ## Monitor Kubernetes with Prometheus
 
 Prometheus is a powerful monitoring and alerting toolkit, and we'll use it to monitor our Kubernetes cluster. Additionally, we'll install the node exporter using Helm to collect metrics from our cluster nodes.
