@@ -680,7 +680,8 @@ chmod +x kubectl
 
 sudo mv kubectl /usr/local/bin/
 
-minikube start --driver=docker```
+minikube start --driver=docker
+```
 
 
 ## Monitor Kubernetes with Prometheus
@@ -740,7 +741,7 @@ To deploy an application with ArgoCD, we can follow these steps, which we'll out
   kubectl get all -n argocd
 
   kubectl port-forward svc/argocd-server -n argocd 30000:443
-  
+
 ```
 
 3. **Set our GitHub Repository as a Source:**
