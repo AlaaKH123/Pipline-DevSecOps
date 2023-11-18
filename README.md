@@ -54,9 +54,7 @@ It will show an error cause we need API key
 
 **Step 3: Get the API Key:**
 
-- Open a
--
--   web browser and navigate to TMDB (The Movie Database) website.
+- Open aweb browser and navigate to TMDB (The Movie Database) website.
 - Click on "Login" and create an account.
 - Once logged in,we go to our profile and select "Settings."
 - Click on "API" from the left-side panel.
