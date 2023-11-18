@@ -218,23 +218,6 @@ pipeline {
 
 Certainly, here are the instructions without step numbers:
 
-**Install Dependency-Check and Docker Tools in Jenkins**
-
-**Install Dependency-Check Plugin:**
-
-- We go to "Dashboard" in our Jenkins web interface.
-- Navigate to "Manage Jenkins" → "Manage Plugins."
-- Click on the "Available" tab and search for "OWASP Dependency-Check."
-- Check the checkbox for "OWASP Dependency-Check" and click on the "Install without restart" button.
-
-**Configure Dependency-Check Tool:**
-
-- After installing the Dependency-Check plugin, we need to configure the tool.
-- We go to "Dashboard" → "Manage Jenkins" → "Global Tool Configuration."
-- Find the section for "OWASP Dependency-Check."
-- Add the tool's name, e.g., "DP-Check."
-- Save our settings.
-
 **Install Docker Tools and Docker Plugins:**
 
 - Go to "Dashboard" in our Jenkins web interface.
@@ -258,7 +241,7 @@ Certainly, here are the instructions without step numbers:
   - Enter our DockerHub credentials (Username and Password) and give the credentials an ID (e.g., "docker").
   - Click "OK" to save our DockerHub credentials.
 
-Now, we have installed the Dependency-Check plugin, configured the tool, and added Docker-related plugins along with our DockerHub credentials in Jenkins. We can now proceed with configuring our Jenkins pipeline to include these tools and credentials in our CI/CD process.
+Now, we have added Docker-related plugins along with our DockerHub credentials in Jenkins. We can now proceed with configuring our Jenkins pipeline to include these tools and credentials in our CI/CD process.
 
 ```groovy
 
@@ -302,12 +285,7 @@ pipeline{
                 sh "npm install"
             }
         }
-        stage('OWASP FS SCAN') {
-            steps {
-                dependencyCheck additionalArguments: '--scan ./ --disableYarnAudit --disableNodeAudit', odcInstallation: 'DP-Check'
-                dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
-            }
-        }
+
         stage('TRIVY FS SCAN') {
             steps {
                 sh "trivy fs . > trivyfs.txt"
@@ -433,7 +411,7 @@ pipeline{
 
    We can access Prometheus in a web browser using your server's IP and port 9090:
 
-   `http://<your-server-ip>:9090`
+   `http://<server-ip>:9090`
 
    **Installing Node Exporter:**
 
@@ -518,10 +496,10 @@ pipeline{
      - job_name: 'jenkins'
        metrics_path: '/prometheus'
        static_configs:
-         - targets: ['<your-jenkins-ip>:<your-jenkins-port>']
+         - targets: ['<jenkins-ip>:<jenkins-port>']
    ```
 
-   We make sure to replace `<your-jenkins-ip>` and `<your-jenkins-port>` with the appropriate values for our Jenkins setup.
+   We make sure to replace `<jenkins-ip>` and `<jenkins-port>` with the appropriate values for our Jenkins setup.
 
    We check the validity of the configuration file:
 
@@ -537,7 +515,7 @@ pipeline{
 
    we can access Prometheus targets at:
 
-   `http://<your-prometheus-ip>:9090/targets`
+   `http://<prometheus-ip>:9090/targets`
 
 
 ####Grafana
@@ -604,7 +582,7 @@ sudo systemctl status grafana-server
 
 We open a web browser and navigate to Grafana using our localhost IP address. The default port for Grafana is 3000. For example:
 
-`http://<our-server-ip>:3000`
+`http://<localhost>:3000`
 
 We'll be prompted to log in to Grafana. The default username is "admin," and the default password is also "admin."
 
@@ -659,7 +637,7 @@ That's it! We've successfully installed and set up Grafana to work with Promethe
 **Phase 5: Notification**
 
 1. **Implement Notification Services:**
-    - Set up email notifications in Jenkins or other notification mechanisms.
+    - Set up email notifications in Jenkins .
 
 # Phase 6: Kubernetes
 
