@@ -129,7 +129,7 @@ docker build --build-arg TMDB_V3_API_KEY=<the-api-key> -t netflix .
     
     - Access Jenkins in a web browser using the localhost IP .
         
-        publicIp:8080
+        localhost:8080
         
 2. **Install Necessary Plugins in Jenkins:**
 
