@@ -18,7 +18,7 @@
 
 ### **Phase 1: Initial Setup and Deployment**
 
-**Step 2: Clone the Code:**
+**Step 1: Clone the Code:**
 
 - Update all the packages and then clone the code.
     
@@ -27,7 +27,7 @@
     ```
     
 
-**Step 3: Install Docker and Run the App Using a Container:**
+**Step 2: Install Docker and Run the App Using a Container:**
 
     
     ```bash
@@ -52,9 +52,11 @@
 
 It will show an error cause we need API key
 
-**Step 4: Get the API Key:**
+**Step 3: Get the API Key:**
 
-- Open a web browser and navigate to TMDB (The Movie Database) website.
+- Open a
+-
+-   web browser and navigate to TMDB (The Movie Database) website.
 - Click on "Login" and create an account.
 - Once logged in,we go to our profile and select "Settings."
 - Click on "API" from the left-side panel.
