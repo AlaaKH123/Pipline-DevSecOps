@@ -720,6 +720,15 @@ To deploy an application with ArgoCD, we can follow these steps, which we'll out
 
   kubectl port-forward svc/argocd-server -n argocd 30007:443
 
+  To get your ArgoCD project when you acess for the first time
+  
+  kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | ForEach-Object {[System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($_))}
+
+  If it didn't work
+
+  export ARGO_PWD=`kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d`
+  echo $ARGO_PWD
+
 ```
 
 3. **Set our GitHub Repository as a Source:**
